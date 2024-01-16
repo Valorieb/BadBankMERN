@@ -1,0 +1,97 @@
+body {
+  background-image: url("Assets/grayBackground1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* background-color: rgb(196, 194, 194); */
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+  background-color: rgb(51, 51, 63);
+  padding: 20px;
+  font-family: "Rubik Mono One", sans-serif;
+}
+
+h2 {
+  text-align: center;
+  padding: 20px;
+  font-family: "Rubik Mono One", sans-serif;
+}
+
+h3 {
+  text-align: center;
+  padding: 20px;
+  font-family: "Rubik Mono One", sans-serif;
+}
+
+nav {
+  background-color: rgb(180, 216, 248);
+  padding: 16px 32px;
+}
+
+nav a {
+  margin-right: 16px;
+}
+
+nav a.active {
+  text-shadow: 1px 1px 10px rgb(255, 174, 187);
+  font-weight: bold;
+}
+
+p {
+  font-family: "Kanit", sans-serif;
+}
+
+.badbank {
+  font-family: "Rubik Mono One", sans-serif;
+  padding: 10px;
+}
+
+.bg-createAccount {
+  background-image: url("Assets/grayBackground4.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0;
+}
+
+.bg-login {
+  background-image: url("Assets/grayBackground2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0;
+}
+
+.custom-disabled-button {
+  background-color: #ccc;
+  color: #666;
+  cursor: not-allowed;
+}
+
+.errorMsg {
+  color: red;
+}
+
+.full-screen {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.uiSuccessMsg {
+  font-size: x-large;
+  color: green;
+  padding: 20px;
+}
