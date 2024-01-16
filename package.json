@@ -1,0 +1,16 @@
+{
+  "name": "bad-bank3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": "20.10.0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
