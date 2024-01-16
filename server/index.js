@@ -24,6 +24,14 @@ app.use(
   })
 );
 
+// Serve static files from the React app
+app.use(express.static(path.join(__dirname, "client", "build")));
+
+// Handle other routes and return the React app
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "client", "build", "index.html"));
+});
+
 // API routes
 app.use("/api", require("./routes/authRoutes"));
 
