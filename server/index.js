@@ -24,6 +24,9 @@ app.use(
   })
 );
 
+// API routes
+app.use("/", require("./routes/authRoutes"));
+
 // Serve static files from the React app
 app.use(express.static(path.join(__dirname, "client", "build")));
 
@@ -31,10 +34,3 @@ app.use(express.static(path.join(__dirname, "client", "build")));
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "client", "build", "index.html"));
 });
-
-// API routes
-app.use("/api", require("./routes/authRoutes"));
-
-const port = process.env.PORT || 8000;
-const host = "0.0.0.0";
-app.listen(port, () => console.log(`Server is running on port ${port}`));

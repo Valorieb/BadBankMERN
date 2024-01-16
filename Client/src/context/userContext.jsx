@@ -20,7 +20,7 @@ export function UserContextProvider({ children }) {
 
   const fetchBalance = () => {
     axios
-      .get("/api/profile")
+      .get("/profile")
       .then((response) => {
         const newBalance = response.data.balance;
         updateBalance(newBalance);
@@ -33,7 +33,7 @@ export function UserContextProvider({ children }) {
 
   const fetchName = () => {
     axios
-      .get("/api/profile")
+      .get("/profile")
       .then((response) => {
         const newName = response.data.name;
         updateName(newName);
@@ -46,7 +46,7 @@ export function UserContextProvider({ children }) {
 
   const fetchEmail = () => {
     axios
-      .get("/api/profile")
+      .get("/profile")
       .then((response) => {
         const newEmail = response.data.email;
         updateEmail(newEmail);
