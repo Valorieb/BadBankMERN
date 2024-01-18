@@ -46,7 +46,7 @@ export default function Home() {
                 color: "pink",
                 textDecoration: "none", // Remove default underline
               }}
-              activeStyle={{ color: "#e0f7fa" }}
+              activestyle={{ color: "#e0f7fa" }}
             >
               Create an account
             </NavLink>

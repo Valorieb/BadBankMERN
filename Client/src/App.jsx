@@ -10,7 +10,8 @@ import { Toaster } from "react-hot-toast";
 import Dashboard from "./pages/Dashboard";
 import { UserContextProvider } from "./context/userContext";
 
-axios.defaults.baseURL = "https://mern-bb-valories-projects.vercel.app/";
+
+axios.defaults.baseURL = "http://localhost:8000";
 axios.defaults.withCredentials = true;
 
 function App() {
