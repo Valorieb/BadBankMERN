@@ -11,20 +11,12 @@ const {
   withdraw,
 } = require("../controllers/authController");
 
-// Middleware for CORS
-router.use(
-  cors({
-    credentials: true,
-    origin: "http://localhost:3000",
-  })
-);
-
-router.get("/", test);
-router.post("/register", registerUser);
-router.post("/login", loginUser);
-router.post("/logout", logoutUser);
-router.get("/profile", getProfile);
-router.post("/deposit", deposit);
-router.post("/withdraw", withdraw);
+router.get("/api", test);
+router.post("/api/register", registerUser);
+router.post("/api/login", loginUser);
+router.post("/api/logout", logoutUser);
+router.get("/api/profile", getProfile);
+router.post("/api/deposit", deposit);
+router.post("/api/withdraw", withdraw);
 
 module.exports = router;
