@@ -11,19 +11,11 @@ const {
   withdraw,
 } = require("../controllers/authController");
 
-//middleware
+// Middleware for CORS
 router.use(
   cors({
     credentials: true,
-    origin: process.env.CORS_ORIGIN || "*",
-  })
-);
-
-router.use(
-  cors({
-    credentials: true,
-    origin:
-      process.env.NODE_ENV === "production" ? process.env.CORS_ORIGIN : "*",
+    origin: "http://localhost:3000",
   })
 );
 
