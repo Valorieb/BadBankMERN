@@ -11,6 +11,13 @@ const {
   withdraw,
 } = require("../controllers/authController");
 
+router.use(
+  cors({
+    origin: "http://54.167.210.197:3000",
+    credentials: true,
+  })
+);
+
 router.get("/api", test);
 router.post("/api/register", registerUser);
 router.post("/api/login", loginUser);

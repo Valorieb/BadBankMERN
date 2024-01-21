@@ -7,42 +7,35 @@ const path = require("path");
 const app = express();
 
 // Database connection
-mongoose.connection.on("connected", () => {
-  console.log("Database Connected");
-});
-
-mongoose.connection.on("error", (err) => {
-  console.error("Database connection error:", err);
-});
-
-mongoose.connect(process.env.MONGO_URL);
+mongoose
+  .connect(process.env.MONGO_URL)
+  .then(() => console.log("Database Connected"))
+  .catch((err) => console.error("Database connection error:", err));
 
 // Middleware
 app.use(express.json());
 app.use(cookieParser());
 app.use(express.urlencoded({ extended: false }));
 
-app.use(cors());
-
-// API routes
-app.use("/api", require("./routes/authRoutes"));
-
 // Serve static files from the React app
 app.use(express.static(path.join(__dirname, "client", "build")));
+
+app.use(
+  cors({
+    credentials: true,
+    origin: process.env.CORS_ORIGIN | "*",
+  })
+);
 
 // Handle other routes and return the React app
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "client", "build", "index.html"));
 });
 
-// Start the server on :8000 for the backend
-const backendPort = process.env.BACKEND_PORT || 8000;
-app.listen(backendPort, () => {
-  console.log(`Backend server is running on port: ${backendPort}`);
-});
+// API routes
+app.use("/api", require("./routes/authRoutes"));
 
-// Start the server on :3000 for the frontend
-const frontendPort = process.env.FRONTEND_PORT || 3000;
-app.listen(frontendPort, () => {
-  console.log(`Frontend server is running on port: ${frontendPort}`);
-});
+// Start the server on :8000 for the backend
+const port = process.env.PORT | 8000;
+const host = "0.0.0.0/0";
+app.listen(port, () => console.log(`Server is running on port ${port}`));
