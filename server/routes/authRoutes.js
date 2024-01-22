@@ -13,7 +13,7 @@ const {
 
 router.use(
   cors({
-    origin: "http://54.167.210.197:3000",
+    origin: "http://54.197.66.72:3000",
     credentials: true,
   })
 );
