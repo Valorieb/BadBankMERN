@@ -36,6 +36,6 @@ app.get("*", (req, res) => {
 app.use("/api", require("./routes/authRoutes"));
 
 // Start the server on :8000 for the backend
-const port = process.env.PORT | 8000;
+const port = process.env.PORT || 8000;
 const host = "0.0.0.0/0";
-app.listen(port, () => console.log(`Server is running on port ${port}`));
+app.listen(port, () => console.log(`Server running on port ${port}`));
