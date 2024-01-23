@@ -114,7 +114,11 @@ export default function Dashboard() {
     }
 
     axios
-      .post("/deposit", { amount: depositAmount }, { withCredentials: true })
+      .post(
+        "/api/deposit",
+        { amount: depositAmount },
+        { withCredentials: true }
+      )
       .then((response) => {
         const newBalance = response.data.balance;
         updateBalance(newBalance);
@@ -138,7 +142,7 @@ export default function Dashboard() {
     ) {
       axios
         .post(
-          "/withdraw",
+          "/api/withdraw",
           { amount: withdrawAmount },
           { withCredentials: true }
         )

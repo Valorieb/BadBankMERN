@@ -31,7 +31,7 @@ export default function Navbar() {
   const logoutUser = async () => {
     try {
       // Send a request to the server to logout
-      await axios.post("/logout");
+      await axios.post("/api/logout");
 
       // Perform any client-side cleanup, e.g., removing user data from local storage
       localStorage.removeItem("token");
