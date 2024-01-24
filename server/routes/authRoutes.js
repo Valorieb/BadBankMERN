@@ -11,19 +11,19 @@ const {
   withdraw,
 } = require("../controllers/authController");
 
-router.use(
-  cors({
-    origin: "http://54.197.66.72:3000",
-    credentials: true,
-  })
-);
+// router.use(
+//   cors({
+//     origin: "http://valorie-env.eba-zrmhmgsy.eu-north-1.elasticbeanstalk.com/",
+//     credentials: true,
+//   })
+// );
 
-router.get("/api", test);
-router.post("/api/register", registerUser);
-router.post("/api/login", loginUser);
-router.post("/api/logout", logoutUser);
-router.get("/api/profile", getProfile);
-router.post("/api/deposit", deposit);
-router.post("/api/withdraw", withdraw);
+router.get("/", test);
+router.post("/register", registerUser);
+router.post("/login", loginUser);
+router.post("/logout", logoutUser);
+router.get("/profile", getProfile);
+router.post("/deposit", deposit);
+router.post("/withdraw", withdraw);
 
 module.exports = router;
