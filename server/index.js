@@ -18,7 +18,7 @@ app.use(cookieParser());
 app.use(express.urlencoded({ extended: false }));
 
 // Serve static files from the React app
-app.use(express.static("client/build"));
+app.use(express.static("../client/build"));
 
 app.use(
   cors({
