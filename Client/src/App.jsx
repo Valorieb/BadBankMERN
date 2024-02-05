@@ -10,7 +10,7 @@ import { Toaster } from "react-hot-toast";
 import Dashboard from "./pages/Dashboard";
 import { UserContextProvider } from "./context/userContext";
 
-axios.defaults.baseURL = "http://54.197.66.72:8000";
+axios.defaults.baseURL = "https://badbankmern.onrender.com";
 axios.defaults.withCredentials = true;
 
 function App() {
