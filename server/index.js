@@ -18,7 +18,7 @@ app.use(cookieParser());
 app.use(express.urlencoded({ extended: false }));
 
 // Serve static files from the React app
-app.use(express.static(path.join(__dirname, "client", "build")));
+app.use(express.static("client/build"));
 
 app.use(
   cors({
@@ -37,5 +37,5 @@ app.use("/api", require("./routes/authRoutes"));
 
 // Start the server on :8000 for the backend
 const port = process.env.PORT || 8000;
-const host = "0.0.0.0/0";
+
 app.listen(port, () => console.log(`Server running on port ${port}`));
